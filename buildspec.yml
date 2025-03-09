@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+      - echo "Installing dependencies"
+      - mvn clean install -DskipTests
+  build:
+    commands:
+
+      - echo "Building the application"
+      - mvn package -DskipTests
+artifacts:
+  files:
+    - target/sample-app-1.0.jar
+  discard-paths: yes
