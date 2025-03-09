@@ -14,5 +14,7 @@ phases:
       - mvn package -DskipTests
 artifacts:
   files:
-    - target/sample-app-1.0.jar
+    - target/codebase-poc-0.0.1-SNAPSHOT.jar
+    - appspec.yml
+    - Scripts
   discard-paths: yes
